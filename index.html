@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Website Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="left">
+      <header class="left-header">
+        <h1>AI Website Builder</h1>
+        <div class="key-row">
+          <input id="apiKey" type="password" placeholder="Enter OpenAI API key" />
+          <button id="saveKey">Save</button>
+        </div>
+        <p class="note">Your OpenAI key is stored only in your browser (localStorage).</p>
+      </header>
+
+      <main class="chat-area" id="chat">
+        <!-- messages go here -->
+      </main>
+
+      <form id="chatForm" class="chat-form">
+        <input id="userInput" placeholder="Ask the AI to build a website, e.g. 'Create a landing page for a coffee shop'" />
+        <button type="submit">Send</button>
+      </form>
+    </aside>
+
+    <section class="right">
+      <div class="toolbar">
+        <button id="generateBtn">Generate (AI)</button>
+        <button id="runBtn">Run / Preview</button>
+        <button id="copyBtn">Copy Code</button>
+        <button id="clearBtn">Clear</button>
+      </div>
+
+      <div class="editor-preview">
+        <div class="editor">
+          <label>Code</label>
+          <textarea id="code" spellcheck="false" placeholder="Generated HTML/CSS/JS will appear here"></textarea>
+        </div>
+
+        <div class="preview">
+          <label>Preview</label>
+          <iframe id="preview" sandbox="allow-scripts allow-forms"></iframe>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
